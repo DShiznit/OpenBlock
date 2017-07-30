@@ -179,7 +179,8 @@ pip-log.txt
 console.log
 *.cached.dts
 !Engine/bin
-My Projects/
+##My Projects/
+buildFiles/
 Project Manager.exe
 projects.xml
 Qt*.dll
