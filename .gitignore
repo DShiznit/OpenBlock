@@ -67,10 +67,10 @@ local.properties
 *.vspscc
 .builds
 *.dotCover
-*.dll
+##*.dll
 *.lib
 *.exp
-*.exe
+##*.exe
 
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
