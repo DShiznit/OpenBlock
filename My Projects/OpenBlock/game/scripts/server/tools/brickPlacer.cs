@@ -81,7 +81,7 @@ datablock ItemData(BrickPlacer)
    className = "Weapon";
 
    // Basic Item properties
-   shapeFile = "art/shapes/weapons/Ryder/TP_Ryder.DAE";
+   shapeFile = "art/shapes/bricks/brickItem.dts";
    mass = 1;
    elasticity = 0.2;
    friction = 0.6;
@@ -89,22 +89,22 @@ datablock ItemData(BrickPlacer)
    PreviewImage = 'ryder.png';
 
    // Dynamic properties defined by the scripts
-   pickUpName = "Ryder pistol";
-   description = "Ryder";
-   image = RyderWeaponImage;
+   pickUpName = "Brick placer";
+   description = "Brick Placer";
+   image = BrickPlacerImage;
    reticle = "crossHair";
 };
 
 
-datablock ShapeBaseImageData(RyderWeaponImage)
+datablock ShapeBaseImageData(BrickPlacerImage)
 {
    // Basic Item properties
-   shapeFile = "art/shapes/weapons/Ryder/TP_Ryder.DAE";
-   shapeFileFP = "art/shapes/weapons/Ryder/FP_Ryder.DAE";
+   shapeFile = "art\shapes\bricks\brickitem.dts";
+   shapeFileFP = "art\shapes\bricks\brickitem.dts";
    emap = true;
 
-   imageAnimPrefix = "Pistol";
-   imageAnimPrefixFP = "Pistol";
+   imageAnimPrefix = "BrickPlacer";
+   imageAnimPrefixFP = "BrickPlacer";
 
    // Specify mount point & offset for 3rd person, and eye offset
    // for first person rendering.
