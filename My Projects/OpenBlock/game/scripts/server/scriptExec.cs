@@ -22,6 +22,7 @@
 
 // Load up all scripts.  This function is called when
 // a server is constructed.
+exec("./bricks/brickInit.cs");
 exec("./camera.cs");
 exec("./triggers.cs");
 exec("./VolumetricFog.cs");
@@ -33,6 +34,7 @@ exec("./projectile.cs");
 exec("./radiusDamage.cs");
 exec("./teleporter.cs");
 exec("./physicsShape.cs");
+exec("./build.cs");
 
 // Load our supporting weapon script, it contains methods used by all weapons.
 exec("./weapon.cs");
@@ -41,6 +43,9 @@ exec("./weapon.cs");
 // We only need weapon scripts for those weapons that work differently from the
 // class methods defined in weapon.cs
 exec("./proximityMine.cs");
+
+// Load our tools
+exec("./tools/brickPlacer.cs");
 
 // Load our default player script
 exec("./player.cs");
