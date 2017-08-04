@@ -22,7 +22,6 @@
 
 // Load up all scripts.  This function is called when
 // a server is constructed.
-exec("./bricks/brickInit.cs");
 exec("./camera.cs");
 exec("./triggers.cs");
 exec("./VolumetricFog.cs");
@@ -34,7 +33,6 @@ exec("./projectile.cs");
 exec("./radiusDamage.cs");
 exec("./teleporter.cs");
 exec("./physicsShape.cs");
-exec("./build.cs");
 
 // Load our supporting weapon script, it contains methods used by all weapons.
 exec("./weapon.cs");
@@ -64,6 +62,13 @@ exec("./turret.cs");
 exec("./gameCore.cs"); // This is the 'core' of the gametype functionality.
 exec("./gameDM.cs"); // Overrides GameCore with DeathMatch functionality.
 
+// Load OpenBlock scripts
+
+exec("./bricks/brickInit.cs");
+exec("./build.cs");
+exec("./tools/toolexec.cs");
+
+
 //Entity/Component stuff
 if(isFile("./components/game/camera.cs"))
    exec("./components/game/camera.cs");
@@ -83,3 +88,4 @@ if(isFile("./gameObjects/GameObjectManager.cs"))
    exec("./gameObjects/GameObjectManager.cs");
    execGameObjects();  
 }
+

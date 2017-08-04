@@ -99,8 +99,8 @@ datablock ItemData(BrickPlacer)
 datablock ShapeBaseImageData(BrickPlacerImage)
 {
    // Basic Item properties
-   shapeFile = "art\shapes\bricks\brickitem.dts";
-   shapeFileFP = "art\shapes\bricks\brickitem.dts";
+   shapeFile = "art/shapes/bricks/brickItem.dts";
+   shapeFileFP = "art/shapes/bricks/brickItem.dts";
    emap = true;
 
    imageAnimPrefix = "BrickPlacer";
@@ -125,22 +125,19 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    className = "WeaponImage";
 
    // Projectiles and Ammo.
-   item = Ryder;
-   ammo = RyderAmmo;
-   clip = RyderClip;
+   item = BrickPlacer;
+   //ammo = RyderAmmo;
+   //clip = RyderClip;
 
-   projectile = BulletProjectile;
+   projectile = BrickPlacerProjectile;
    projectileType = Projectile;
    projectileSpread = "0.0";
 
-   altProjectile = GrenadeLauncherProjectile;
-   altProjectileSpread = "0.02";
-
-   casing = BulletShell;
-   shellExitDir        = "1.0 0.3 1.0";
-   shellExitOffset     = "0.15 -0.56 -0.1";
-   shellExitVariance   = 15.0;
-   shellVelocity       = 3.0;
+   //casing = BulletShell;
+   //shellExitDir        = "1.0 0.3 1.0";
+   //shellExitOffset     = "0.15 -0.56 -0.1";
+   //shellExitVariance   = 15.0;
+   //shellVelocity       = 3.0;
 
    // Weapon lights up while firing
    lightType = "WeaponFireLight";
@@ -166,7 +163,7 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    // Initial start up state
    stateName[0]                     = "Preactivate";
    stateTransitionOnLoaded[0]       = "Activate";
-   stateTransitionOnNoAmmo[0]       = "NoAmmo";
+   //stateTransitionOnNoAmmo[0]       = "NoAmmo";
 
    // Activating the gun.  Called when the weapon is first
    // mounted and there is ammo.
@@ -183,7 +180,7 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    stateTransitionOnMotion[2]       = "ReadyMotion";
    stateScaleAnimation[2]           = false;
    stateScaleAnimationFP[2]         = false;
-   stateTransitionOnNoAmmo[2]       = "NoAmmo";
+   //stateTransitionOnNoAmmo[2]       = "NoAmmo";
    stateTransitionOnTriggerDown[2]  = "Fire";
    stateSequence[2]                 = "idle";
 
@@ -196,7 +193,7 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    stateScaleAnimationFP[3]         = false;
    stateSequenceTransitionIn[3]     = true;
    stateSequenceTransitionOut[3]    = true;
-   stateTransitionOnNoAmmo[3]       = "NoAmmo";
+   //stateTransitionOnNoAmmo[3]       = "NoAmmo";
    stateTransitionOnTriggerDown[3]  = "Fire";
    stateSequence[3]                 = "run";
 
@@ -231,7 +228,7 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    // Put another round in the chamber
    stateName[6]                     = "NewRound";
    stateTransitionGeneric0In[6]     = "SprintEnter";
-   stateTransitionOnNoAmmo[6]       = "NoAmmo";
+   //stateTransitionOnNoAmmo[6]       = "NoAmmo";
    stateTransitionOnTimeout[6]      = "Ready";
    stateWaitForTimeout[6]           = "0";
    stateTimeoutValue[6]             = 0.05;
@@ -266,7 +263,7 @@ datablock ShapeBaseImageData(BrickPlacerImage)
    // No ammo dry fire
    stateName[9]                     = "DryFire";
    stateTransitionGeneric0In[9]     = "SprintEnter";
-   stateTransitionOnAmmo[9]         = "ReloadClip";
+   stateTransitionOnAmmo[9]         = "ReloadClip";	
    stateWaitForTimeout[9]           = "0";
    stateTimeoutValue[9]             = 0.7;
    stateTransitionOnTimeout[9]      = "NoAmmo";
